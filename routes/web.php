@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/certificado/{uid}', 'validationController@validar')->name('validar');
