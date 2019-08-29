@@ -78,7 +78,7 @@
                 <br>
                 <p class="flex-center" style="font-size: xx-large">Infelizmente parece que este certificado não é valido,</p>
                 <p class="flex-center" style="font-size: xx-large">Por favor entre em contato com o setor responsavel.</p>
-                <p class="flex-center" style="font-size: xx-large">Erro:<br> {{ $error }}</p>
+                <p class="flex-center" style="font-size: xx-large">Erro:<br> 404</p>
             </div>
 
 
