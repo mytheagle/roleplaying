@@ -39,10 +39,10 @@
     <div style="position: absolute;
     align-content: space-around;
     top: 200px;}">
-        <br><br><br><br>
-        <p id="end" class="p1" >Endereço</p>
+        <br><br><br><br><br>
+        <p id="end" class="p1 font-weight-bold" >Endereço:<span class="font-weight-normal"> R. Des. Almeida Guimarães, 1 - Pajuçara, Maceió - AL, 57030-160 - Delman Empresarial, Sala 806</span> </p>
 
-        <p id="num" class="p1" >Numero</p>
+        <p id="num" class="p1 font-weight-bold" >Telefone:<span class="font-weight-normal"> (82) 3021-0339</span></p>
 
 
     </div>
@@ -50,10 +50,11 @@
     </body>
 
     <script>
-        $(document).ready(function() {
-            $("#img").width(400);
-            setTimeout(end, 5000);
-            setTimeout(num, 6000);
+        $(window).ready(function() {
+
+            $("#img").width(500);
+            setTimeout(end, 3000);
+            setTimeout(num, 4000);
 
 
 

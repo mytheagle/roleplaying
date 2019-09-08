@@ -17,7 +17,14 @@ class validationController extends Controller
      */
     public function validar($uid)
     {
-        $json = json_decode( $this->my_file_get_contents('http://aliancaemp.ddns.net:50001/api/syclus/sistema/certificado/'.$uid),true);
+        $json = json_decode( $this->my_file_get_contents('http://191.184.33.179:50001/api/syclus/sistema/certificado/'.$uid),true);
+
+        if($json == null) {
+
+                return view('offline');
+
+        };
+
 
         if($json == json_decode("{\"Sucesso\":\"false\",\"Mensagem\":\"Registro n\u00E3o encontrado!\"}",true)) {
 
@@ -26,12 +33,13 @@ class validationController extends Controller
         };
 
         $json = (object) $json;
-      $coletas = (object)$json->coletas;
-return view('validar')->with([
-'certificado' => $json,
-'coletas' => $coletas
-]);
-        return view('validar')->with('uid',$uid);
+        $coletas = (object)$json->coletas;
+
+            return view('validar')->with([
+            'certificado' => $json,
+            'coletas' => $coletas
+            ]);
+
 }
 
 
